@@ -25,7 +25,7 @@ def is_part(c):
 
 def is_adjacent_to_part(grid, i, j, length):
     for row in range(max(0, i - 1), min(len(grid), i + 2)):
-        for col in range(max(0, j - 1), min(len(grid), j + length + 1)):
+        for col in range(max(0, j - 1), min(len(grid[i]), j + length + 1)):
             if is_part(grid[row][col]):
                 return True
 
