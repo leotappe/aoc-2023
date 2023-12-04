@@ -6,13 +6,10 @@ Part 1
 
 
 def parse_number(grid, i, j):
-    number = int(grid[i][j])
-
-    while j + 1 < len(grid[i]) and grid[i][j + 1].isdigit():
-        number = 10 * number + int(grid[i][j + 1])
-        j += 1
-
-    return number
+    for k, c in enumerate(grid[i][j:]):
+        if not c.isdigit():
+            return int(grid[i][j:j + k])
+    return int(grid[i][j:])
 
 
 def is_start_of_number(grid, i, j):
