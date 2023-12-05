@@ -34,7 +34,6 @@ class Map:
         self.range_mappings.append(mapping)
         self.range_mappings.sort(key=lambda mapping: mapping.source_start)
 
-
     def map(self, range: Range):
         curr_range = Range(range.start, range.length)
         resulting_ranges = []
