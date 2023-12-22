@@ -1,0 +1,169 @@
+digraph {
+	tx
+	tx -> dx
+	nx
+	nx -> fn
+	nx -> rn
+	nr
+	nr -> cj
+	nr -> mh
+	nk
+	nk -> jt
+	nk -> vk
+	mv
+	mv -> fk
+	mv -> rn
+	pz [shape=square]
+	pz -> kt
+	pz -> pg
+	pz -> mb
+	pz -> vr
+	pz -> hp
+	pz -> jp
+	pz -> tx
+	jt [shape=square]
+	jt -> fb
+	jt -> zb
+	jt -> jq
+	jt -> sv
+	jt -> lp
+	vp
+	vp -> lp
+	vp -> jt
+	qs [shape=square]
+	qs -> gf
+	lj
+	lj -> jt
+	lj -> dt
+	jh
+	jh -> mh
+	xc
+	xc -> nx
+	hx
+	hx -> xb
+	kd
+	kd -> pz
+	kd -> pp
+	jq
+	jq -> jt
+	jq -> qt
+	lp
+	lp -> jm
+	ph
+	ph -> mb
+	ph -> pz
+	sv [shape=square]
+	sv -> gf
+	ff
+	ff -> xc
+	th
+	th -> mh
+	th -> hx
+	kt
+	kt -> ct
+	ct
+	ct -> kd
+	ct -> pz
+	mh [shape=square]
+	mh -> bc
+	mh -> qs
+	mh -> hx
+	mh -> xb
+	mh -> nv
+	pg [shape=square]
+	pg -> gf
+	fn
+	fn -> kn
+	sk
+	sk -> hr
+	nv
+	nv -> mh
+	nv -> th
+	dx
+	dx -> pz
+	dx -> ph
+	broadcaster [shape=star]
+	broadcaster -> bx
+	broadcaster -> jq
+	broadcaster -> nv
+	broadcaster -> jp
+	dt
+	dt -> jt
+	dt -> zb
+	fx
+	fx -> sk
+	fx -> rn
+	rv
+	rv -> rn
+	gv
+	gv -> mh
+	gv -> nr
+	fk
+	fk -> rn
+	fk -> rv
+	cj
+	cj -> mh
+	cj -> vh
+	xk
+	xk -> jt
+	xk -> nk
+	vh
+	vh -> mh
+	vh -> jh
+	zb
+	zb -> fb
+	mb
+	mb -> jc
+	kn
+	kn -> rn
+	kn -> mv
+	jc
+	jc -> pz
+	jc -> kt
+	sp [shape=square]
+	sp -> gf
+	hp
+	hp -> tx
+	jf
+	jf -> bc
+	jf -> mh
+	fb
+	fb -> vp
+	xm
+	xm -> mh
+	xm -> gv
+	jm
+	jm -> jt
+	jm -> xk
+	vr
+	vr -> hp
+	hr
+	hr -> ff
+	jp
+	jp -> pz
+	jp -> vr
+	rn [shape=square]
+	rn -> fn
+	rn -> hr
+	rn -> bx
+	rn -> ff
+	rn -> xc
+	rn -> sp
+	rn -> sk
+	pp
+	pp -> pz
+	gf [shape=square]
+	gf -> rx
+	xb
+	xb -> jf
+	bx
+	bx -> rn
+	bx -> fx
+	bc
+	bc -> xm
+	qt
+	qt -> lj
+	qt -> jt
+	vk
+	vk -> jt
+}
