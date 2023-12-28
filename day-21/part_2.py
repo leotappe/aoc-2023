@@ -76,43 +76,6 @@ def solve_ray(grid, steps, dists_from_anchor):
     return reachable_plots
 
 
-def solve_quadrant_naive(grid, steps, dists_from_anchor):
-    d = len(grid)
-    reachable_plots = 0
-
-    # Precompute stuff
-    max_dist_from_anchor = max(n for row in dists_from_anchor for n in row if n is not None)
-    odd = sum(1 for row in dists_from_anchor for n in row if n is not None and n % 2 == 1)
-    even = sum(1 for row in dists_from_anchor for n in row if n is not None and n % 2 == 0)
-
-    for row in itertools.count():
-        dist_to_anchor = d + 1 + row * d
-        if steps < dist_to_anchor:
-            break
-    
-        remaining_steps = steps - (d + 1) - row * d
-
-        if remaining_steps < max_dist_from_anchor:
-            completely_traversable_copies = 0
-        else:
-            completely_traversable_copies = (remaining_steps - max_dist_from_anchor) // d + 1
-
-        reachable_plots += (completely_traversable_copies // 2) * even
-        reachable_plots += (completely_traversable_copies - completely_traversable_copies // 2) * odd
-
-        remaining_steps -= completely_traversable_copies * d
-        parity = (completely_traversable_copies + 1) % 2
-
-        while remaining_steps >= d:
-            reachable_plots += sum(n % 2 == parity for row in dists_from_anchor for n in row if n is not None and n <= remaining_steps)
-            remaining_steps -= d
-            parity = (parity + 1) % 2
-
-        reachable_plots += sum(n % 2 == parity for row in dists_from_anchor for n in row if n is not None and n <= remaining_steps)
-
-    return reachable_plots
-
-
 def solve_quadrant(grid, steps, dists_from_anchor):
     d = len(grid)
     reachable_plots = 0
